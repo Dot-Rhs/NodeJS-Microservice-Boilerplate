@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  server:
+    image: nodeapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nodeapi
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000

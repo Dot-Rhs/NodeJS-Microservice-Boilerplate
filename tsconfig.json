@@ -1,0 +1,65 @@
+{
+  /* Visit official docs: https://aka.ms/tsconfig.json */
+  "compilerOptions": {
+    "baseUrl": "./",
+    "rootDirs": ["test", "src"],
+    "outDir": "./build",
+    "paths": {
+      "*": [ "node_modules/*", "test/*", "src/*"]
+    },
+    "target": "es2020",
+    "lib": ["es2020"],
+    "types": ["node", "./node_modules/@types/jest"],
+    "typeRoots": ["./node_modules/@types", "src/@types"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declaration": true,
+    "importHelpers": true,
+
+    "resolveJsonModule": true, /* importing modules with a ‘.json’ extension. Enable typeckecing and autocompletion on JSON files */
+    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
+
+    "strict": true /* Enable all strict type-checking options. */,
+
+    /* Strict Type-Checking Options */
+    "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
+    "strictNullChecks": true /* Enable strict null checks. */,
+    "strictFunctionTypes": true /* Enable strict checking of function types. */,
+    "strictPropertyInitialization": true /* Enable strict checking of property initialization in classes. */,
+    "noImplicitThis": true /* Raise error on 'this' expressions with an implied 'any' type. */,
+    "alwaysStrict": true /* Parse in strict mode and emit "use strict" for each source file. */,
+
+    /* Additional Checks */
+    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "noUnusedParameters": true /* Report errors on unused parameters. */,
+    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
+    "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
+    "forceConsistentCasingInFileNames": true /* Force consistent casing in file names */,
+
+    /* Debugging Options */
+    "traceResolution": false /* Report module resolution log messages. */,
+    "listEmittedFiles": false /* Print names of generated files part of the compilation. */,
+    "listFiles": false /* Print names of files part of the compilation. */,
+    "pretty": true /* Stylize errors and messages using color and context. */,
+
+    /* Experimental Options */
+    "skipLibCheck": true /* Skip type checking of declaration files. */,
+    "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
+    "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+  },
+  "include": [
+    ".env",
+    ".env.*",
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "index.js",
+    "jest.config.js",
+    "config/*.config.js" // for *.config.js files
+  ],
+  "exclude": ["node_modules", "src/**/*.test.ts"],
+  "compileOnSave": false,
+  "typeAcquisition": {
+    "include": ["jest"]
+  }
+}

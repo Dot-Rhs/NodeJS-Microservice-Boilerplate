@@ -1,0 +1,22 @@
+{
+  "roots": [ "<rootDir>/src", "<rootDir>/test" ],
+  "preset": "ts-jest",
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "tsconfig.json"
+    }
+  },
+  "transform": {
+    "^.+\\.ts?$": "ts-jest"
+  },
+  "testEnvironment": "node",
+  "testMatch": ["**/?(*.)+(spec|test).+(ts|tsx|js)", "./src/.*\\.(test|spec)?\\.(ts|ts)$"],
+  "testPathIgnorePatterns": ["<rootDir>/node_modules/"],
+  "moduleFileExtensions": [ "ts", "tsx", "js", "jsx", "json", "node" ],
+  "coverageDirectory": "coverage",
+  "collectCoverageFrom": ["src/**/*.{ts,tsx,js,jsx}", "!src/**/*.d.ts"],
+  "coverageProvider": "v8",
+  "moduleNameMapper": {
+    "@util/(.*)/(.*)$": "<rootDir>/app/utils/$1/$2"
+  }
+}
